@@ -7,5 +7,4 @@ def Cypher():
     text = str(input()).lower
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     for x in text:
-        char = alphabet.find(x)
-        new_char = 
+        char = alphabet.find(x) + 3
