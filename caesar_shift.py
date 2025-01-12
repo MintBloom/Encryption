@@ -1,10 +1,15 @@
 
 def MessageToEncode():
     print ("What message would you like to encode?")
-    print (Cypher())
+    Cypher()
+    
 
 def Cypher():
-    text = str(input()).lower
+    text = str(input())
     alphabet = "abcdefghijklmnopqrstuvwxyz"
-    for x in text:
-        char = alphabet.find(x) + 3
+    new_char = ""
+    for i in text:
+        new_char += alphabet[alphabet.find(i) + 3]    
+    print (new_char)
+
+MessageToEncode()
