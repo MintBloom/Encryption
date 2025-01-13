@@ -5,11 +5,15 @@ def MessageToEncode():
     
 
 def Cypher():
-    text = str(input())
+    msg = str(input())
     alphabet = "abcdefghijklmnopqrstuvwxyz"
-    new_char = ""
-    for i in text:
-        new_char += alphabet[alphabet.find(i) + 3]    
-    print (new_char)
+    encrypt_msg = ""
+    offset = 3
+    for i in msg:
+        if i == " ":
+            encrypt_msg += i
+        else:
+            encrypt_msg += alphabet[(alphabet.find(i) + offset) % len(alphabet)]    
+    print (f"encryption: {encrypt_msg}")
 
 MessageToEncode()
