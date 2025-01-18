@@ -2,7 +2,8 @@
 # Opening function giving option to encrypt or decrypt a message
 def EncryptOrDecrypt():
     print ("Decrypt or encrypt?")
-    choice = str(input()) 
+    choice = str(input())
+    choice = choice.lower
     if choice == "decrypt":
         deCypher()
     elif choice == "encrypt":
